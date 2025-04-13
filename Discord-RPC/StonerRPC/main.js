@@ -114,7 +114,7 @@ const startupFolder = path.join(
   process.env.APPDATA,
   "Microsoft\\Windows\\Start Menu\\Programs\\Startup"
 );
-const shortcutPath = path.join(startupFolder, "RippyRPC.lnk");
+const shortcutPath = path.join(startupFolder, "StonerRPC.lnk");
 
 ipcMain.on("set-startup", (_, enable) => {
   const exePath = process.execPath;

@@ -4,7 +4,7 @@ const os = require("os");
 const path = require("path");
 const { ipcRenderer } = require("electron");
 
-const configDir = path.join(os.homedir(), "Documents", "RippyRPC");
+const configDir = path.join(os.homedir(), "Documents", "StonerRPC");
 const configPath = path.join(configDir, "config.json");
 
 let config = {
