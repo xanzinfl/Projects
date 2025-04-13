@@ -1,0 +1,8 @@
+2025-03-10T12:18:04.260Z DEBUG RegistrationParameters: port=28196
+2025-03-10T12:18:04.266Z DEBUG RegistrationParameters: pluginUUID=7CD18FA1DE17EE3888C7016D5C4D3A4B
+2025-03-10T12:18:04.266Z DEBUG RegistrationParameters: registerEvent=registerPlugin
+2025-03-10T12:18:04.267Z DEBUG RegistrationParameters: info={"application":{"font":"Segoe UI","language":"en","platform":"windows","platformVersion":"10.0.26100","version":"6.8.1.21263"},"colors":{"buttonMouseOverBackgroundColor":"#464646FF","buttonPressedBackgroundColor":"#303030FF","buttonPressedBorderColor":"#646464FF","buttonPressedTextColor":"#969696FF","highlightColor":"#0078FFFF"},"devicePixelRatio":1,"devices":[{"id":"F8CD54C8FD0C9B20AB982065EE9A5C9F","name":"Stream Deck 2","size":{"columns":5,"rows":3},"type":0},{"id":"3B3870356AADECAB0B8CF1BF9DDB29B5","name":"Stream Deck Mobile","size":{"columns":8,"rows":8},"type":3}],"plugin":{"uuid":"com.xanzinfl.test","version":"0.1.0.0"}}
+2025-03-10T12:18:04.743Z TRACE Connection: {"device":"F8CD54C8FD0C9B20AB982065EE9A5C9F","deviceInfo":{"name":"Stream Deck 2","size":{"columns":5,"rows":3},"type":0},"event":"deviceDidConnect"}
+2025-03-10T18:02:30.670Z TRACE Connection: {"device":"F8CD54C8FD0C9B20AB982065EE9A5C9F","event":"deviceDidDisconnect"}
+2025-03-10T20:59:24.115Z TRACE Connection: {"event":"systemDidWakeUp"}
+2025-03-10T20:59:24.189Z TRACE Connection: {"device":"F8CD54C8FD0C9B20AB982065EE9A5C9F","deviceInfo":{"name":"Stream Deck 2","size":{"columns":5,"rows":3},"type":0},"event":"deviceDidConnect"}

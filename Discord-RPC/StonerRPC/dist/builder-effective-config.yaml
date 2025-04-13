@@ -1,0 +1,11 @@
+directories:
+  output: dist
+  buildResources: build
+appId: com.xanzinfl.stonerrpc
+productName: StonerRPC
+win:
+  target: nsis
+files:
+  - filter:
+      - '**/*'
+electronVersion: 27.3.11

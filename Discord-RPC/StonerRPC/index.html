@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rippy RPC</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #1e1e1e;
+      color: #ffffff;
+      padding: 20px;
+    }
+
+    h2 {
+      color: #9cdcfe;
+    }
+
+    label {
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0 15px;
+      background-color: #2d2d2d;
+      border: 1px solid #555;
+      color: #fff;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #5000ff;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      margin: 5px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #005f9e;
+    }
+
+    hr {
+      border: 1px solid #444;
+      margin: 20px 0;
+    }
+
+    .collapsible {
+      background-color: #2d2d2d;
+      color: #fff;
+      cursor: pointer;
+      padding: 10px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      border-radius: 5px;
+    }
+
+    .active, .collapsible:hover {
+      background-color: #5000ff;
+    }
+
+    .content {
+      padding: 10px;
+      display: none;
+      overflow: hidden;
+      background-color: #1e1e1e;
+    }
+
+    .checkbox-container {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .checkbox-container input {
+      margin-right: 10px;
+    }
+
+    #ripCountDisplay {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Stoner RPC</h2>
+  <div id="status">RPC: 🔴 Disconnected</div>
+  <div id="ripCountDisplay">Rips: Loading...</div>
+
+  <hr />
+
+  <h3>Rip Counter Controls</h2>
+  <!-- RIP Control Buttons -->
+  <button onclick="adjustRip('inc')">➕ RIP++</button>
+  <button onclick="adjustRip('dec')">➖ RIP--</button>
+  <button onclick="adjustRip('reset')">🔁 Reset</button>
+
+  <hr />
+
+  <h3>Rich Presense</h3>
+
+  <button onclick="startRPC()">🟢 Start RPC</button>
+  <button onclick="stopRPC()">🔴 Stop RPC</button>
+
+  <hr />
+
+  <!-- Collapsible Section for Config Inputs -->
+  <button class="collapsible">Configuration</button>
+  <div class="content">
+    <label>Client ID: <input id="clientId" /></label>
+    <label>State: <input id="state" /></label>
+    <label>Details: <input id="details" placeholder="Use {rip} for counter" /></label>
+    <label>Button 1 Label: <input id="b1Label" /></label>
+    <label>Button 1 URL: <input id="b1Url" /></label>
+    <label>Button 2 Label: <input id="b2Label" /></label>
+    <label>Button 2 URL: <input id="b2Url" /></label>
+    <label>Large Image Key: <input id="largeImageKey" /></label>
+    <label>Large Image Text: <input id="largeImageText" /></label>
+    <label>Small Image Key: <input id="smallImageKey" /></label>
+    <label>Small Image Text: <input id="smallImageText" /></label>
+
+    <label>RIP File Path: <input id="filePath" /></label>
+
+    <!-- Startup Option Checkbox -->
+    <div class="checkbox-container">
+      <input type="checkbox" id="startup" />
+      <label for="startup">Run on Startup</label>
+    </div>
+
+    <hr />
+
+    <button onclick="saveConfig()">💾 Save Config</button>
+  </div>
+  <script src="renderer.js"></script>
+  <script>    
+  // Collapsible Section Functionality
+  var coll = document.getElementsByClassName("collapsible");
+  for (var i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+  </script>
+
+</body>
+</html>

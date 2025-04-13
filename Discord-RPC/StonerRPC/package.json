@@ -1,0 +1,28 @@
+{
+  "name": "discord-rpc-gui",
+  "version": "1.1.2",
+  "description": "Custom Discord Rich Presence with GUI and RIP counter",
+  "author": "xanzinfl",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^27.1.0",
+    "electron-builder": "^24.3.0"
+  },
+  "dependencies": {
+    "discord-rpc": "^4.0.1"
+  },
+  "build": {
+    "appId": "com.xanzinfl.stonerrpc",
+    "productName": "StonerRPC",
+    "win": {
+      "target": "nsis"
+    },
+    "files": [
+      "**/*"
+    ]
+  }
+}
