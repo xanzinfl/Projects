@@ -3,4 +3,4 @@ A customizeable Rich Presence for discord with and integrated rip count that can
 
 [Downloads](https://github.com/xanzinfl/Projects/tree/main/Discord-RPC/StonerRPC/dist)
 
-[Latest Version](https://github.com/xanzinfl/Projects/blob/main/Discord-RPC/StonerRPC/dist/StonerRPC%20Setup%201.1.2.exe)
+[Latest Version](https://github.com/xanzinfl/Projects/blob/main/Discord-RPC/StonerRPC/dist/StonerRPC%20Setup%201.1.3.exe)
