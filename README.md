@@ -28,7 +28,7 @@ A customizeable Rich Presence for discord with and integrated rip count that can
 ---
 
 ### [Logitech Auto Clicker](./Logitech%20Auto%20Clicker)
-Clicks buttons on Logitech mice using Logitech Gaming Software or G Hub scripting.
+Clicks buttons on Logitech mice using G Hub scripting.
  Built with LUA.
 
 ➡️ See [Logitech Auto Clicker README](./Logitech%20Auto%20Clicker/README.md)
