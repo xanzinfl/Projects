@@ -54,11 +54,12 @@ def save_config(cfg):
 # OCR detection logic
 def check_for_subtitle(keywords, region):
     screenshot = pyautogui.screenshot(region=tuple(region))
-    text = pytesseract.image_to_string(screenshot)  
+    text = pytesseract.image_to_string(screenshot)
     for keyword in keywords:
         if keyword.lower() in text.lower():
-            return text.strip()
-    return None
+            return text.strip(), True
+    return text.strip(), False
+
 
 def send_webhook(webhook_url):
     requests.post(webhook_url, json={"content": "@everyone 👱️ Theres someone breaking in!"})
@@ -121,6 +122,10 @@ class SubtitleDetectorApp:
 
         tk.Button(root, text="Stop Sound", command=self.stop_sound, **button_args).grid(row=8, column=2, sticky="e")
 
+        self.debug_var = tk.BooleanVar(value=False)
+        tk.Checkbutton(root, text="Debug Mode (show all OCR text)", variable=self.debug_var, **style_args, selectcolor=self.bg_color).grid(row=9, column=0, columnspan=3, sticky="w")
+
+
     def browse_sound(self):
         path = filedialog.askopenfilename(filetypes=[("Audio Files", "*.wav *.mp3")])
         if path:
@@ -171,16 +176,22 @@ class SubtitleDetectorApp:
 
         cooldown = 5
         while self.running:
-            result = check_for_subtitle(self.config["keywords"], self.config["ocr_region"])
-            if result:
+            full_text, matched = check_for_subtitle(self.config["keywords"], self.config["ocr_region"])
+            
+            if self.debug_var.get():
+                self.log(f"[DEBUG] {full_text}")
+
+            if matched:
                 now = time.time()
                 if now - self.last_sent_time > cooldown:
                     send_webhook(self.config["webhook_url"])
                     if self.alert_sound:
                         self.alert_sound.play()
-                    self.log(f"[DETECTED] {result}")
+                    self.log(f"[DETECTED] {full_text}")
                     self.last_sent_time = now
+
             time.sleep(self.config["refresh_rate"])
+
 
 # Init
 if __name__ == "__main__":
