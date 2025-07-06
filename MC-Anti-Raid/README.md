@@ -10,7 +10,7 @@
 
 4. Run Region Finder and input the x and y values from MPOS and set the width and height 300 to start, then press preview to see what its capturing
 
-5. Adjust the x,y,w,h values till its captures the entierty on your subtitles
+5. Adjust the x,y,w,h values till it captures the entierty of your subtitles
   > Keep a bit of overhang on the capture area since some subtitles are longer
 
 6. Once your capture area is the correct size for your monitors resolution click the copy button.
