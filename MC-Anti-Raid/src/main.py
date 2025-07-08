@@ -153,7 +153,14 @@ class SubtitleDetectorApp:
         self.config["refresh_rate"] = self.refresh_var.get()
         self.config["sound_path"] = self.sound_path_var.get()
         self.config["webhook_url"] = self.webhook_var.get()
-        self.config["ocr_region"] = [int(x.strip()) for x in self.region_var.get().split(",") if x.strip().isdigit()]
+        try:
+            parts = [int(x.strip()) for x in self.region_var.get().split(",")]
+            if len(parts) != 4:
+                raise ValueError("OCR region must have exactly 4 values: x, y, width, height.")
+            self.config["ocr_region"] = parts
+        except ValueError as e:
+            self.log(f"[ERROR] Invalid OCR region: {e}")
+            return
         self.config["keywords"] = [line.strip() for line in self.keyword_text.get("1.0", tk.END).splitlines() if line.strip()]
         save_config(self.config)
         self.log("[INFO] Configuration saved.")

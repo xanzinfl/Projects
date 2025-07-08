@@ -4,6 +4,7 @@
 1. Download [MC Anti-Raid](https://github.com/xanzinfl/Projects/raw/refs/heads/main/MC-Anti-Raid/MC%20Anti-Raid.exe?download=), [Region Finder](https://github.com/xanzinfl/Projects/raw/refs/heads/main/MC-Anti-Raid/Region%20Finder.exe?download=), [MPOS](https://sourceforge.net/projects/mpos/)
 
 2. Download and install [Tesseract](https://github.com/UB-Mannheim/tesseract/releases/latest)
+- Add `C:\Program Files\Tesseract-OCR` to your system PATH
 
 ### Configuring OCR Capture
 3. Run MPOS and place your mouse in the top left of where your subtitles are and save the "Physical" x and y positions
