@@ -64,7 +64,6 @@ def get_next_420():
 
             next_420_info = {
                 'next_420_time_utc': next_420_time_utc,
-                'next_420': next_420_time.strftime("%I:%M %p %Z"),
                 'timezone': tz_name,
                 'local_time': local_time.strftime("%I:%M %p %Z"),
             }
@@ -91,9 +90,9 @@ def update_info():
         else:
             time_remaining_str = f"{seconds}s"
 
-        label_var.set(f"The next 4:20 is in {next_420_info['timezone']} at {next_420_info['next_420']}\n"
-                      f"Local time: {next_420_info['local_time']}\n"
-                      f"Time remaining: {time_remaining_str}")
+        label_var.set(f"The next 4:20 is in {next_420_info['timezone']}\n"
+                    f"Local time: {next_420_info['local_time']}\n"
+                    f"Time remaining: {time_remaining_str}")
 
         time_remaining_tooltip = f"Time remaining: {time_remaining_str}"
         # Continue updating every second
@@ -205,21 +204,21 @@ def create_tray_icon():
     draw.rectangle((16, 16, 48, 48), fill="green")
     menu = pystray.Menu(
         item("Restore", restore_window),
-        item("Quit", quit_app)
+        item("Quit", quit_app)  
     )
     return pystray.Icon("Next420Finder", icon_image, time_remaining_tooltip, menu)
 
 load_settings()
 handle_startup()
 
-dark_bg = "#2E2E2E"
+dark_bg = "#111111"
 light_fg = "#FFFFFF"
-button_bg = "#555555"
+button_bg = "#1B1B1B"
 button_fg = "#FFFFFF"
 
 root = tk.Tk()
 root.title("Next 4:20 Finder")
-root.geometry("320x150")
+root.geometry("280x120")
 root.configure(bg=dark_bg)
 root.resizable(False, False)
 root.protocol("WM_DELETE_WINDOW", minimize_to_tray)

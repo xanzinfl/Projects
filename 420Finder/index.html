@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Next 4:20 Finder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="countdown-display">
+            <div id="countdown-timer" class="countdown-timer-text">--:--:--</div>
+            <div id="timezone-info" class="info-text">Finding the next 4:20...</div>
+            <div id="local-time-info" class="info-text"></div>
+        </div>
+
+        <details class="settings-dropdown">
+            <summary>Settings</summary>
+            <div class="settings-panel">
+                <div class="settings-grid">
+                    <label for="minimize-to-tray">Minimize to Tray</label>
+                    <input type="checkbox" id="minimize-to-tray">
+
+                    <label for="run-on-startup">Run on Startup</label>
+                    <input type="checkbox" id="run-on-startup">
+
+                    <label for="notification-text">Notification Text</label>
+                    <input type="text" id="notification-text">
+                </div>
+                <button id="save-btn">Save Settings</button>
+            </div>
+        </details>
+    </div>
+    <script src="renderer.js"></script>
+</body>
+</html>

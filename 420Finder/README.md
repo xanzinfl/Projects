@@ -1,12 +1,20 @@
 ## 420 Finder
 
 ### Downloads
-[Download Latest Version](https://github.com/xanzinfl/Projects/raw/refs/heads/main/420Finder/dist/420%20Finder.exe?download=)
+Download Latest [Stable Portable Exe](https://github.com/xanzinfl/Projects/releases/latest/download/420.Finder.portable.exe)
+
+Download Latest [Stable Windows Installer](https://github.com/xanzinfl/Projects/releases/latest/download/420.Finder.setup.exe)
+
+Download the legacy [Python Portable Build](https://github.com/xanzinfl/Projects/releases/download/420-finder-2.0.0/420.Finder.v1.0.2.legacy.portable.exe)
+
+---
 
 ### Manual Build
 
-1. Download [420Finder.py](https://github.com/xanzinfl/Projects/blob/main/420Finder/420%20Finder.py)
+1. Download [Stable Files]()
 
-2. Run pip install pyinstaller pytz pystray plyer pywin32
+2. Run `npm install --save`
 
-2. pyinstaller --onefile --noconsole --hidden-import=plyer.platforms.win.notification '420 Finder.py'
+3. Run `npm run make`
+
+---
