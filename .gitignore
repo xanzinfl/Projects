@@ -137,3 +137,4 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+420Finder/stable/package-lock.json
