@@ -13,7 +13,7 @@ A collection of stuff I built for fun or convenience. Expect bugs, weird behavio
 
 ### [420Finder](./420Finder)
 Tool to find 4:20 anywhere in the world.  
- Built with Python.
+ Built with Electron.
 
 ➡️ See [420Finder README](./420Finder/README.md)
 
