@@ -1,18 +1,21 @@
 {
-  "name": "420-finder",
-  "version": "2.0.1",
+  "name": "stoner-tools",
+  "version": "1.0.0",
   "description": "Finds the next 4:20 anywhere in the world.",
+  "author": "xanzinfl",
   "main": "main.js",
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make"
   },
-  "author": "xanzinfl",
   "dependencies": {
+    "discord-rpc": "^4.0.1",
     "electron-store": "^8.1.0",
+    "express": "^5.1.0",
     "moment-timezone": "^0.5.43",
-    "node-notifier": "^10.0.1"
+    "node-notifier": "^10.0.1",
+    "socket.io": "^4.8.1"
   },
   "devDependencies": {
     "@electron-forge/cli": "^7.4.0",

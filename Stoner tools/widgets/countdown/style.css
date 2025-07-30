@@ -1,0 +1,25 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: black !important;
+    color: #E0E0E0;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.countdown-timer-text {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #54a354; /* Green accent color */
+    letter-spacing: 2px;
+}
+
+.info-text {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: #e0e0e0;
+}

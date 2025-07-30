@@ -11,19 +11,11 @@ A collection of stuff I built for fun or convenience. Expect bugs, weird behavio
 
 ## Projects
 
-### [420Finder](./420Finder)
-Tool to find 4:20 anywhere in the world.  
- Built with Python.
-
-➡️ See [420Finder README](./420Finder/README.md)
-
----
-
-### [Discord-RPC](./Discord-RPC)
-A customizeable Rich Presence for discord with and integrated rip count that can be used with obs or anything that can read a .txt and display it
+### [Stoner tools](./Stoner tools)
+420 Finder, Custom Discord RPC, and rip counter for OBS all in one!
  Built with Electron.
 
-➡️ See [Discord-RPC README](./Discord-RPC/README.md)
+➡️ See [Stoner Tools README](./Stoner Tools/README.md)
 
 ---
 
@@ -46,3 +38,5 @@ Helpful script for afking on public servers.
  Built with Python.
 
 ➡️ See [MC Anti-Raid README](./MC-Anti-Raid/README.md)
+
+---

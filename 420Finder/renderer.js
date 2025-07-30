@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const countdownTimerEl = document.getElementById('countdown-timer');
     const timezoneInfoEl = document.getElementById('timezone-info');
     const localTimeInfoEl = document.getElementById('local-time-info');
+
     const minimizeToTrayCheck = document.getElementById('minimize-to-tray');
     const runOnStartupCheck = document.getElementById('run-on-startup');
     const notificationTextEl = document.getElementById('notification-text');
@@ -41,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const next420Time = new Date(next420Info.next420TimeUtc);
         const timeUntil = next420Time - new Date();
+
         if (timeUntil > 0) {
             const hours = Math.floor(timeUntil / (1000 * 60 * 60));
             const minutes = Math.floor((timeUntil % (1000 * 60 * 60)) / (1000 * 60));
@@ -48,25 +50,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
             countdownTimerEl.textContent = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
             timezoneInfoEl.textContent = `The next 4:20 is in ${next420Info.timezone}`;
-            localTimeInfoEl.textContent = `(That's ${next420Info.localTime} for you)`;
-
+            localTimeInfoEl.textContent = `(Your local time: ${next420Info.localTime})`;
         } else {
             countdownTimerEl.textContent = "It's 4:20!";
             timezoneInfoEl.textContent = `Right now in ${next420Info.timezone}`;
-            localTimeInfoEl.textContent = '';
+            localTimeInfoEl.textContent = `(Your local time: ${next420Info.localTime})`;
             window.electronAPI.notify420(notificationTextEl.value);
             next420Info = null;
-            clearInterval(updateInterval);
-            setTimeout(startUpdates, 60000);
         }
     }
 
-    function startUpdates() {
-        updateCountdown();
-        updateInterval = setInterval(updateCountdown, 1000);
+
+    function startWorker() {
+        const worker = new Worker('worker.js');
+        worker.onmessage = (event) => {
+            if (event.data === 'tick') {
+                if (next420Info) {
+                    updateCountdown();
+                } else {
+                    setTimeout(() => {
+                        updateCountdown();
+                    }, 60000);
+                }
+            }
+        };
     }
 
     saveBtn.addEventListener('click', saveSettings);
     loadSettings();
-    startUpdates();
+    updateCountdown();
+    startWorker();
 });
