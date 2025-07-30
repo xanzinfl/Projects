@@ -20,7 +20,7 @@ Stoner Tools is packed with features designed for convenience and fun:
 
 | Type | Link | Description |
 | :--- | :--- | :--- |
-| **Windows Installer** | **[Setup.exe](https://github.com/xanzinfl/Projects/releases/download/Stoner-Toolsv1.0.1/Stoner.Tools.v1.0.1-Setup.exe)** | Recommended. Installs the application and adds it to your start menu. |
+| **Windows Installer** | **[Setup.exe](https://github.com/xanzinfl/Projects/releases/download/v1.0.1/Stoner.Tools.v1.0.1-Setup.exe)** | Recommended. Installs the application and adds it to your start menu. |
 
 ---
 
