@@ -1,7 +1,7 @@
 {
   "name": "stoner-tools",
-  "version": "1.0.0",
-  "description": "Finds the next 4:20 anywhere in the world.",
+  "version": "1.0.1",
+  "description": "A handy desktop utility for enthusiasts, featuring a global 420 countdown, Discord Rich Presence, a rip counter, and OBS integration.",
   "author": "xanzinfl",
   "main": "main.js",
   "scripts": {
@@ -30,7 +30,8 @@
   "config": {
     "forge": {
       "packagerConfig": {
-        "icon": "assets/icon"
+        "icon": "assets/icon",
+        "asar": true
       },
       "rebuildConfig": {},
       "makers": [
@@ -49,7 +50,12 @@
           ]
         }
       ],
-      "plugins": []
+      "plugins": [
+        {
+          "name": "@electron-forge/plugin-auto-unpack-natives",
+          "config": {}
+        }
+      ]
     }
   }
 }

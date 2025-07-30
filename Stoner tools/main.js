@@ -8,6 +8,7 @@ const http = require('http');
 const { Server } = require("socket.io");
 const RPC = require("discord-rpc");
 const fs = require('fs');   
+const { version } = require('./package.json');
 
 let mainWindow;
 let tray;
@@ -35,11 +36,20 @@ function updateAndBroadcastCountdown() {
     
     const next420Time = new Date(next420Info.next420TimeUtc);
     const timeUntil = next420Time - new Date();
+
     let data;
+
+    if (timeUntil < -60000) {
+        next420Info = null;
+        updateAndBroadcastCountdown();
+        return;
+    }
+
     if (timeUntil > 0) {
         const hours = Math.floor(timeUntil / (1000 * 60 * 60));
         const minutes = Math.floor((timeUntil % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((timeUntil % (1000 * 60)) / 1000);
+        
         data = {
             is420: false,
             countdown: `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`,
@@ -52,6 +62,7 @@ function updateAndBroadcastCountdown() {
             countdown: "It's 4:20!",
             ...next420Info
         };
+
         if (!next420Info.notified) {
             const notificationText = store.get('notificationText', "It's 4:20 somewhere!");
             notifier.notify({
@@ -136,6 +147,8 @@ function createWindow() {
             mainWindow.hide();
             createTray();
         } else {
+            app.isQuitting = true;
+            if (rpc) rpc.destroy();
             app.quit();
         }
     });
@@ -149,6 +162,11 @@ function createTray() {
     const icon = nativeImage.createFromPath(iconPath);
     tray = new Tray(icon);
     const contextMenu = Menu.buildFromTemplate([
+        {
+            label: `Stoner Tools v${version}`,
+            enabled: false
+        },
+        { type: "separator" },
         {
             label: 'Show App',
             click: () => {
@@ -181,7 +199,7 @@ function createTray() {
             },
         },
     ]);
-    tray.setToolTip('Stoner Tools');
+    tray.setToolTip(`Stoner Tools v${version}`);
     tray.setContextMenu(contextMenu);
 }
 
@@ -267,6 +285,7 @@ function updateActivity(settings) {
 };
 
 app.on('ready', () => {
+    app.setAppUserModelId('com.xanzinfl.stonertools');
     createWindow();
     
     server.listen(PORT, () => {
