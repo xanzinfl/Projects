@@ -27,12 +27,6 @@ Clicks buttons on Logitech mice using G Hub scripting.
 
 ---
 
-### [Flashbang](./Flashbang)
-Random script that flashbangs you randomly.
- Built with Python.
-
----
-
 ### [MC Anti-Raid](./MC-Anti-Raid/)
 Helpful script for afking on public servers.
  Built with Python.
