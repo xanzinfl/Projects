@@ -11,11 +11,11 @@ A collection of stuff I built for fun or convenience. Expect bugs, weird behavio
 
 ## Projects
 
-### [Stoner tools](./Stoner tools)
+### [Stoner tools](./Stoner%20tools)
 420 Finder, Custom Discord RPC, and rip counter for OBS all in one!
  Built with Electron.
 
-➡️ See [Stoner Tools README](./Stoner Tools/README.md)
+➡️ See [Stoner Tools README](./Stoner%20tools/README.md)
 
 ---
 
