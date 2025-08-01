@@ -20,7 +20,6 @@ Stoner Tools is packed with features designed for convenience and fun:
 
 | Type | Link | Description |
 | :--- | :--- | :--- |
-| **Portable Version** | **[Portable.exe](https://github.com/xanzinfl/Projects/releases/download/v1.0.2/stoner-tools-v1.0.2.portable.exe)** | A single executable. No installation needed, just download and run. |
 | **Windows Installer** | **[Setup.exe](https://github.com/xanzinfl/Projects/releases/download/v1.0.2/stoner-tools-v1.0.2.setup.exe)** | Installs the application and adds it to your start menu. |
 
 ---
