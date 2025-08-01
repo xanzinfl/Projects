@@ -3,26 +3,28 @@ body {
     background-color: rgba(0, 0, 0, 0);
     color: #E0E0E0;
     margin: 0;
-    padding: 20px;
-    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    box-sizing: border-box;
 }
 
 .container {
-    text-shadow: 2px 2px 4px #000000;
+    background-color: rgba(0, 0, 0, 0.979);
+    border-radius: 15px;
+    padding: 25px 35px;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
 
 .rip-text {
-    font-size: 6rem;
+    font-size: 5rem;
     font-weight: bold;
     color: #54a354;
 }
 
 .label-text {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: #e0e0e0;
 }
