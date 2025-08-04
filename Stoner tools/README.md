@@ -36,7 +36,7 @@ Stoner Tools is packed with features designed for convenience and fun:
 
 ### Discord Rich Presence
 To get your activity to show up on Discord, you'll need to provide:
-1.  **Client ID:** The Application ID from your app in the [Discord Developer Portal](https://discord.com/developers/applications).
+1.  **Client ID:** The Application ID from your app in the [Discord Developer Portal](https://discord.com/developers/applications). Or, use our default one! `1360824994149568562`
 2.  **Details & State:** The text you want to display.
 3.  **Images & Buttons:** The keys for any assets you've uploaded to your Discord application, and the labels/URLs for custom buttons.
 
@@ -54,9 +54,9 @@ The app hosts a local server on port `4200` to provide real-time widgets for you
     -   **420 Countdown:** `http://localhost:4200/widgets/countdown`
     -   **Rip Counter:** `http://localhost:4200/widgets/ripcounter`
 3.  Set the dimensions to the suggested sizes below, or customize as you see fit:
-    -   Countdown: `420` width, `200` height
-    -   Rip Counter: `200` width, `200` height
-4.  Check the box for "Shutdown source when not visible" to save resources.
+    -   Countdown: `450` width, `250` height
+    -   Rip Counter: `170` width, `210` height
+4.  Remove everything from the custom css box.
 > **Note:** You can customize the look of the counter right in OBS with CSS!
 
 ---
