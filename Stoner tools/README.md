@@ -20,7 +20,7 @@ Stoner Tools is packed with features designed for convenience and fun:
 
 | Type | Link | Description |
 | :--- | :--- | :--- |
-| **Windows Installer** | **[Setup.exe](https://github.com/xanzinfl/Projects/releases/download/v1.0.2/stoner-tools-v1.0.2.setup.exe)** | Installs the application and adds it to your start menu. |
+| **Windows Installer** | **[Setup.exe](https://github.com/xanzinfl/Projects/releases/download/v1.0.3/stoner-tools-v1.0.3.setup.exe)** | Installs the application and adds it to your start menu. |
 
 ---
 
@@ -54,8 +54,8 @@ The app hosts a local server on port `4200` to provide real-time widgets for you
     -   **420 Countdown:** `http://localhost:4200/widgets/countdown`
     -   **Rip Counter:** `http://localhost:4200/widgets/ripcounter`
 3.  Set the dimensions to the suggested sizes below, or customize as you see fit:
-    -   Countdown: `450` width, `250` height
-    -   Rip Counter: `170` width, `210` height
+    -   Countdown: `420` width, `200` height
+    -   Rip Counter: `160` width, `170` height
 4.  Remove everything from the custom css box.
 > **Note:** You can customize the look of the counter right in OBS with CSS!
 

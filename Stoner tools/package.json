@@ -1,6 +1,6 @@
 {
   "name": "stoner-tools",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A handy desktop utility for enthusiasts, featuring a global 420 countdown, Discord Rich Presence, a rip counter, and OBS integration.",
   "author": "xanzinfl",
   "main": "main.js",

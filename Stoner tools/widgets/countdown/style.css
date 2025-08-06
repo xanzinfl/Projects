@@ -8,8 +8,9 @@ body {
     align-items: center;
     height: 100vh;
 }
-
 .container {
+    width: 360px;
+    height: 140px;
     background-color: rgba(0, 0, 0, 0.979);
     border-radius: 15px;
     padding: 25px 35px;
