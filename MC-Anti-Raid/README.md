@@ -20,5 +20,5 @@
 
 
 ## Notes
-You can change the audio by specifying your own path, or replacing alert.mp3 in `%YourUser\Documents\MCAnti-Raid\%`
+You can change the audio by specifying your own path, or replacing alert.mp3 in `%USERPROFILE%\Documents\MCAnti-Raid`
 
